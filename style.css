@@ -222,7 +222,7 @@ li a {
 
 /* Scrollbar specifically for #new */
 #new::-webkit-scrollbar {
-  height: 10px;
+  height: 6px;
 }
 #new::-webkit-scrollbar-thumb {
   background-color: #222429;
@@ -366,9 +366,6 @@ li a {
     padding: 0 8px; /* Adjust nav padding */
   }
 
-#new{
-overflow-horizontal:hidden;
-} 
   .card1-content {
     flex-direction: column;
     align-items: flex-start;

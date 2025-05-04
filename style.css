@@ -222,7 +222,7 @@ li a {
 
 /* Scrollbar specifically for #new */
 #new::-webkit-scrollbar {
-  height: 6px;
+  height: 10px;
 }
 #new::-webkit-scrollbar-thumb {
   background-color: #222429;
@@ -410,4 +410,7 @@ li a {
   .logo {
     margin-left: 6px;
   }
+#new::-webkit-scrollbar {
+  height: 2px;
+}
 }

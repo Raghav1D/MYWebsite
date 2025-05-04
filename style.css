@@ -367,7 +367,7 @@ li a {
   }
 
 #new{
-overflow:hidden;
+overflow-horizontal:hidden;
 } 
   .card1-content {
     flex-direction: column;
@@ -414,23 +414,3 @@ overflow:hidden;
     margin-left: 6px;
   }
 }
-@media (max-width: 480px) {
-  .logo {
-    font-size: 14px;
-  }
-
-  li a {
-    font-size: 12px;
-    padding: 6px 8px;
-  }
-
-  #card1 h1 {
-    font-size: 24px;
-  }
-
-  #new .card {
-    min-width: 120px;
-    font-size: 10px;
-  }
-}
-

@@ -221,7 +221,6 @@
       }
 
       #new {
-        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.575);
         backdrop-filter: blur(4px);
         display: flex;
         overflow-x: auto;

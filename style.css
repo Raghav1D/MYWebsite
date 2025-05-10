@@ -314,10 +314,7 @@ li a {
   border-radius: 6px;
   transition: all 0.1s ease-in;
 }
-#close-sidebar-button:hover {
-  background-color: #f0f0f0;
-  color: #222;
-}
+
 #overlay {
   position: fixed;
   top: 0;

@@ -15,37 +15,40 @@
 
   <nav>
     <ul class="hideOnMobile">
-      <div class="logo">Website</div>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#">Shop</a></li>
-      <li><a href="#">Blog</a></li>
+      <div class="logo">Website</div> 
+
+      <div class="center-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Blog</a></li>
+      </div>
+
       <li><a href="#">Login</a></li>
-      <li id="cart"><a href="#" target="_parent"><i class="material-icons">shopping_cart</i></a></li>
-  </ul>
-  <li class="menu-button" onclick="toggleSidebar()">
-      <a href="#"><i class="material-icons">more_horiz</i></a> 
-  </li>
-</nav>
+      <li id="cart"><a href="#"><i class="material-icons">shopping_cart</i></a></li>
+    </ul>
+    <li class="menu-button" onclick="toggleSidebar()">
+        <a href="#"><i class="material-icons">more_horiz</i></a> 
+    </li>
+  </nav>
 
-<div class="sidebar">
-  <button id="close-sidebar-button" onclick="closeSidebar()">
-      <i class="material-icons">close</i>
-  </button>
-  <ul>
-      <li><a href="index.html" onclick="hideSidebar()" target="_parent">Home</a></li>
-      <li><a href="#" onclick="hideSidebar()">Shop</a></li>
-      <li><a href="#" onclick="hideSidebar()">Blog</a></li>
-      <li><a href="#" onclick="hideSidebar()">Login</a></li>
-  </ul>
-</div>
+  <div class="sidebar">
+    <button id="close-sidebar-button" onclick="closeSidebar()">
+        <i class="material-icons">close</i>
+    </button>
+    <ul>
+        <li><a href="#" onclick="hideSidebar()">Home</a></li>
+        <li><a href="#" onclick="hideSidebar()">Shop</a></li>
+        <li><a href="#" onclick="hideSidebar()">Blog</a></li>
+        <li><a href="#" onclick="hideSidebar()">Login</a></li>
+    </ul>
+  </div>
 
-<div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+  <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
 
   <main class="main_container">
     <section id="card1">
       <div class="card1-content">
         <h1>New Arrivals</h1>
-
         <div id="new-wrapper">
           <section id="new">
             <div class="card">Item 1</div>
@@ -55,7 +58,6 @@
             <div class="card">Item 5</div>
             <div class="card">Item 6</div>
           </section>
-       
         </div>
       </div>
     </section>
@@ -66,7 +68,7 @@
       <div class="row">
         <div class="footer-col1">
           <h3>Company</h3>
-          <ul >
+          <ul>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Our Services</a></li>
             <li><a href="#">Privacy Policy</a></li>
@@ -83,47 +85,42 @@
         <div class="footer-col3">
           <h3>Follow Us</h3>
           <div class="social-links">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>
     </div>
   </footer>
 
-
   <script>
-            function toggleSidebar() {
-            const sidebar = document.querySelector('.sidebar');
-            const overlay = document.getElementById('overlay');
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      const overlay = document.getElementById('overlay');
+      sidebar.classList.remove('animate-out');
+      sidebar.classList.add('animate-in');
+      sidebar.style.display = 'flex';
+      overlay.style.display = 'block';
+    }
 
-            sidebar.classList.remove('animate-out');
-            sidebar.classList.add('animate-in');
-            sidebar.style.display = 'flex';
-            overlay.style.display = 'block';
-        }
+    function hideSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      const overlay = document.getElementById('overlay');
+      sidebar.classList.remove('animate-in');
+      sidebar.classList.add('animate-out');
+      setTimeout(() => {
+        sidebar.style.display = 'none';
+        sidebar.classList.remove('animate-out');
+      }, 300);
+      overlay.style.display = 'none';
+    }
 
-        function hideSidebar() {
-            const sidebar = document.querySelector('.sidebar');
-            const overlay = document.getElementById('overlay');
-
-            sidebar.classList.remove('animate-in');
-            sidebar.classList.add('animate-out');
-
-            setTimeout(() => {
-                sidebar.style.display = 'none';
-                sidebar.classList.remove('animate-out');
-            }, 300); // Match animation time
-
-            overlay.style.display = 'none';
-        }
-
-        function closeSidebar() {
-            hideSidebar();
-        }
-
+    function closeSidebar() {
+      hideSidebar();
+    }
   </script>
+
 </body>
 </html>

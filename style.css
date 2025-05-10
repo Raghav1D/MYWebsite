@@ -1,14 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-    
-:root {
-  --primary-color: #222429;
-  --secondary-color: #F4FFF8;
-  --background-color-light: #d1e5ff;
-}
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
+  border-radius:50px;
   background-color: #F4FFF8;
 }
 ::-webkit-scrollbar-thumb {
@@ -154,8 +149,8 @@ li a {
 
 .main_container {
   width: 100%;
-  height:2000px;
-  padding-top: 80px;
+  height:1500px;
+  padding-top: 60px;
   display: flex;
   justify-content: center;
 }
@@ -176,7 +171,7 @@ li a {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 40px;
-  padding: 0 50px;
+  padding: 0 60px;
   width: 100%;
   flex-wrap: wrap;
 }
@@ -222,7 +217,7 @@ li a {
 
 /* Scrollbar specifically for #new */
 #new::-webkit-scrollbar {
-  height: 10px;
+  height: 8px;
 }
 #new::-webkit-scrollbar-thumb {
   background-color: #222429;
@@ -358,12 +353,15 @@ li a {
   animation: slideOutRight 0.3s forwards;
 }
 
-/* Responsive */
+
 @media (max-width: 800px) {
+body, html{
+    overflow-x: hidden; 
+}
 
   nav {
-    height: 50px; /* Further reduce nav height on mobile */
-    padding: 0 8px; /* Adjust nav padding */
+    height: 60px; 
+    padding: 0 8px; 
   }
 
   .card1-content {
@@ -382,7 +380,7 @@ li a {
 
   #new {
     width: 100%;
-    height: 100px;
+    height: 150px;
   }
 
   #new .card {
@@ -412,5 +410,8 @@ li a {
   }
 #new::-webkit-scrollbar {
   height: 2px;
+}
+::-webkit-scrollbar-thumb {
+border:2px solid #ffffff;
 }
 }

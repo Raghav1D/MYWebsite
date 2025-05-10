@@ -63,6 +63,13 @@
         gap: 5px;
       }
 
+   .sidebar #scart a{
+         display:flex;
+         justify-content:center;
+         align-items:center;
+         width:50%;
+     }
+
       li a {
         display:flex;
         align-items:center;

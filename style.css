@@ -488,6 +488,10 @@
         #card2 h2 {
           font-size: 30px;
         }
+
+        #card1{
+          height:600px;
+        } 
         
         #card2{
             height:300px;
@@ -508,7 +512,7 @@
         
          #new2 {
           width: 100%;
-          height: 180px;
+          height: 200px;
         }
 
         #new .card {

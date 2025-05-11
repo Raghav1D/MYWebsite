@@ -178,7 +178,7 @@
       }
 
       #card1 {
-        background-image:url(waves.webp) ;
+        background-image:url('waves.webp') ;
         background-size: cover;
         background-position: center;
         height: 700px;

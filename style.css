@@ -756,7 +756,7 @@ body.dark-mode #modeToggle2:hover{
     }
 
     .box{
-        display: inline-block;
+        display: inline-flex;
     }
 
     #cont .text{

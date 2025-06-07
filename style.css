@@ -756,9 +756,7 @@ body.dark-mode #modeToggle2:hover{
     }
 
     .box{
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
+        display: inline-block;
         text-wrap: nowrap;
     }
 

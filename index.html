@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MYWebsite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"> </head>
+<body>
+
+  <div id="nav" class="nav">
+    <div class="ul">
+      <div class="logo"><a href="#cont">MYWebsite</a></div>
+      <li id="home"><a href="#cont" class="nav_link"></i> Home</a></li>
+      <li id="about"><a href="#cont2" class="nav_link"></i> About</a></li>
+      <li id="MYProjects"><a href="#cont3" class="nav_link"></i> Projects</a></li>
+      <li id="blog"><a href="#" class="nav_link"></i> Blogs</a></li>
+      <button id="modeToggle"><i class="ri-moon-fill"></i></button>
+    </div>
+    <div class="downbar">
+      <div class="ul2">
+        <div id="logo2"><a href="#cont">MYWebsite</a></div>
+        <div class="rightbtm">
+        <button id="modeToggle2"><i class="ri-moon-fill"></i></button>
+        <li id="menu" onclick="showSideBar()"><i class="ri-menu-5-line"></i></li> 
+        </div>      
+      </div>
+    </div>
+  </div>
+  
+  <div id="cont">
+    <div class="box">
+    <span class="text first_text">Built With</span>
+    <span class="text sec_text" style="font-family: monospace;">Curiosity/></span>
+    </div>  
+  </div>
+
+  <div class="scroll">
+    <div id="mouse">
+      <div id="dot"></div>
+    </div>
+    <a href="#cont2">
+    <h1>Scroll Down</h1>
+    </a>
+  </div>
+
+  <section id="cont2">
+    <h1>About Me</h1>
+    <div class="about">
+      <img src="Capture.PNG" alt="Profile picture">
+      <div class="about-text">
+        <p>
+          Hello! I'm a passionate developer who loves creating responsive and visually appealing websites. I enjoy turning complex problems into simple, beautiful, and intuitive designs.
+        </p>
+        <p>
+          Whether it's frontend magic or backend logic, I find joy in every line of code I write. Let’s build something amazing together!
+        </p>
+      </div>
+    </div>
+    <div id="social_links">
+      <link><a data-social="Whatsapp" style=" --colors: #25D366;" href="#"><i class="ri-whatsapp-line"></i></a></link>
+      <link><a data-social="Github" style=" --colors: #333333;" href="#"><i class="ri-github-line"></i></a></link>
+      <link><a data-social="Gmail" style=" --colors: #d44638;" href="#"><i class="ri-mail-line"></i></a></link>
+    </div>
+  </section>
+
+  <div id="cont3">
+    <div class="content">
+      <h1>MY Projects{}</h1>
+      <span>404 not found..!?</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <li id="home2"><a href="#cont" onclick="hideSection()"><i class="ri-home-fill" style="font-size: x-large;"></i><span> Home</span></a></li>
+    <li id="about2"><a href="#cont2" onclick="hideSection()"><i class="ri-user-3-fill" style="font-size: x-large;"></i><span> About</span></a></li>
+    <li id="MYProjects2"><a href="#cont3" onclick="hideSection()" ><i class="ri-code-s-slash-fill" style="font-size: x-large;"></i><span> Projects</span></a></li>
+    <li id="blog2"><a href="#" onclick="hideSection()"><i class="ri-article-fill" style="font-size: x-large;"></i><span> Blog</span></a></li>
+  </div>
+
+  <script>
+    const modeToggle = document.getElementById('modeToggle');
+
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      modeToggle.innerHTML = `<i class="ri-sun-fill"></i>`; // Changed to sun for dark mode
+    }
+
+    // Dark mode
+    modeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDarkMode = document.body.classList.contains('dark-mode');
+      // icon update
+      modeToggle.innerHTML = isDarkMode ? `<i class="ri-sun-fill"></i>` : `<i class="ri-moon-fill"></i>`;
+    });
+
+    // If you have a separate mobile toggle, define and update it here
+    const modeToggle2 = document.getElementById('modeToggle2');
+    if (modeToggle2) { // Check if modeToggle2 exists before adding event listener
+        modeToggle2.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            modeToggle2.innerHTML = isDarkMode ? `<i class="ri-sun-fill"></i>` : `<i class="ri-moon-fill"></i>`;
+        });
+    }
+
+
+    // Scroll function
+    window.addEventListener("scroll", function () {
+      const nav = document.getElementById("nav");
+      if (window.scrollY > 50) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    });
+
+    // Function to show/hide the sidebar section
+    function showSideBar() {
+      const section = document.querySelector('.section');
+      if (section.classList.contains('active')) {
+        section.classList.remove('active');
+        section.style.bottom = '-100px';
+      } else {
+        section.classList.add('active');
+        section.style.bottom = '60px'; // set bottom
+      }
+    }
+
+    // Function to hide the section when a link inside it is clicked
+    function hideSection() {
+        const section = document.querySelector('.section');
+        if (section.classList.contains('active')) {
+            section.classList.remove('active');
+            section.style.bottom = '-100px';
+        }
+    }
+
+    // Event listener to close the section when clicking outside of it or the menu button
+    document.addEventListener('click', function (event) {
+      const section = document.querySelector('.section');
+      const menu = document.getElementById('menu');
+
+      if (
+        section.classList.contains('active') &&
+        !section.contains(event.target) &&
+        !menu.contains(event.target)
+      ) {
+        section.classList.remove('active');
+        section.style.bottom = '-100px';
+      }
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MYWebsite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+  
+  <!-- Main Navigation -->
+  <nav id="nav" class="nav" role="navigation" aria-label="Main navigation">
+    <div class="ul">
+      <div class="logo">
+        <a href="#cont" aria-label="Go to homepage">MYWebsite</a>
+      </div>
+        <li><a href="#cont" id="home" class="nav_link" aria-label="Go to Home">Home</a></li>
+        <li><a href="#cont2" id="about" class="nav_link" aria-label="Go to About Section">About</a></li>
+        <li><a href="#cont3" id="MYProjects" class="nav_link" aria-label="Go to Projects Section">Projects</a></li>
+        <li><a href="#cont4" id="blog" class="nav_link" aria-label="Go to Blog Section">Blogs</a></li>
+      <button id="modeToggle" aria-label="Toggle dark mode"><i class="ri-moon-fill"></i></button>
+    </div>
+  </nav>
+
+  <!-- Mobile/Bottom Navigation -->
+  <div class="downbar" aria-label="Mobile Navigation">
+    <div class="ul2">
+      <div id="logo2">
+        <a href="#cont" aria-label="Go to homepage">MYWebsite</a>
+      </div>
+      <div class="rightbtm">
+        <button id="modeToggle2" aria-label="Toggle dark mode"><i class="ri-moon-fill"></i></button>
+        <li id="menu" onclick="showSection()" aria-label="Open side menu"><i class="ri-menu-5-line"></i></li>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <main id="cont" role="main" aria-label="Homepage introduction">
+    <div class="box">
+      <span class="text first_text" aria-live="polite">Built With</span>
+      <span class="text sec_text" style="font-family: monospace;">Curiosity/></span>
+    </div>
+    <div class="name">
+      <p>Hello I'm</p>
+      <h2>Raghav.</h2>
+      <h4>Just a normal Dev{ }</h4>
+    </div>
+  </main>
+  <!-- Scroll Prompt -->
+  <div class="scroll" role="region" aria-labelledby="scrollPrompt">
+    <div id="mouse">
+      <div id="dot"></div>
+    </div>
+    <a href="#cont2" aria-label="Scroll to About Section">
+      <h1 id="scrollPrompt">Scroll Down</h1>
+    </a>
+  </div>
+
+  <!-- About Section -->
+  <section id="cont2" aria-labelledby="aboutSectionHeading">
+    <h1 id="aboutSectionHeading">About Me!</h1>
+    <div class="about">
+      <img src="Capture.PNG" alt="Profile picture" role="img">
+      <div class="about-text">
+        <p>
+          Hello! I'm a passionate developer who loves creating responsive and visually appealing websites. I enjoy turning complex problems into simple, beautiful, and intuitive designs.
+        </p>
+        <p>
+          Whether it's frontend magic or backend logic, I find joy in every line of code I write. Let’s build something amazing together!
+        </p>
+      </div>
+    </div>
+
+    <!-- Social Links -->
+    <div id="social_links" role="region" aria-label="Social media links">
+      <link><a data-social="Whatsapp" style=" --colors: #25d365d5;" href="#"><i class="ri-whatsapp-line"></i></a></link>
+      <link><a data-social="Github" style=" --colors: #333333d2;" href="#"><i class="ri-github-line"></i></a></link>
+      <link><a data-social="Gmail" style=" --colors: #d44538d3;" href="#"><i class="ri-mail-line"></i></a></link>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="cont3" role="region" aria-labelledby="projectsSectionHeading">
+    <div class="content">
+      <h1 id="projectsSectionHeading">MY_Projects/></h1>
+    </div>
+    <div class="carousel">
+      <div class="group">
+        <div class="card">Project A</div>
+        <div class="card">Project B</div>
+        <div class="card">Project C</div>
+        <div class="card">Project D</div>
+      </div>
+
+      <div aria-hidden class="group">
+        <div class="card">Project A</div>
+        <div class="card">Project B</div>
+        <div class="card">Project C</div>
+        <div class="card">Project D</div>
+      </div>
+    </div>
+    <a href="index_404.html" id="check_link" target="_blank"><span>Check It Out!</span></a>
+  </section>
+
+  <!-- Blogs_section -->
+  <section id="cont4" aria-labelledby="blogsSectionHeading">
+    <div class="content2">
+      <h1 id="blogsSectionHeading">Blogs</h1>
+    </div>
+    <span>Under Development/></span>
+  </section>
+
+
+  <!-- downbar Navigation -->
+  <nav class="section" role="navigation" aria-label="downbar navigation">
+      <li>
+        <a href="#cont" onclick="hideSection()" aria-label="Go to Home">
+          <i class="ri-home-fill" style="font-size: x-large;"></i><span> Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#cont2" onclick="hideSection()" aria-label="Go to About">
+          <i class="ri-user-3-fill" style="font-size: x-large;"></i><span> About</span>
+        </a>
+      </li>
+      <li>
+        <a href="#cont3" onclick="hideSection()" aria-label="Go to Projects">
+          <i class="ri-code-s-slash-fill" style="font-size: x-large;"></i><span> Projects</span>
+        </a>
+      </li>
+      <li>
+        <a href="#cont4" onclick="hideSection()" aria-label="Go to Blog">
+          <i class="ri-article-fill" style="font-size: x-large;"></i><span> Blog</span>
+        </a>
+      </li>
+  </nav>
+
+<!-- footer -->
+
+  <footer class="footer" role="contentinfo" aria-label="Site Footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h2>MYWebsite</h2>
+        <p>Built with passion and curiosity. Thanks for visiting!</p>
+      </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 Raghav. All rights reserved.</p>
+    </div>
+  </footer>
+  
+
+  <!-- Scripts -->
+  <script>
+    const modeToggle = document.getElementById('modeToggle');
+    const modeToggle2 = document.getElementById('modeToggle2');
+
+    // Restore saved theme
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      modeToggle.innerHTML = `<i class="ri-sun-fill"></i>`;
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      modeToggle2.innerHTML = `<i class="ri-sun-fill"></i>`;
+    }
+
+    // Toggle dark mode
+    modeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      modeToggle.innerHTML = isDark ? `<i class="ri-sun-fill"></i>` : `<i class="ri-moon-fill"></i>`;
+    });
+
+    if (modeToggle2) {
+      modeToggle2.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        modeToggle2.innerHTML = isDark ? `<i class="ri-sun-fill"></i>` : `<i class="ri-moon-fill"></i>`;
+      });
+    }
+
+    // Scroll nav styling
+    // window.addEventListener("scroll", function () {
+    //   const nav = document.getElementById("nav");
+    //   nav.classList.toggle("scrolled", window.scrollY > 50);
+    // });
+
+    // Sidebar show/hide
+    function showSection() {
+      const section = document.querySelector('.section');
+      const active = section.classList.toggle('active');
+      section.style.bottom = active ? '85px' : '-100px';
+      section.style.width = active ? '90%' : '45%';
+      section.style.opacity = active ? '1' : '0';
+    }
+
+    function hideSection() {
+      const section = document.querySelector('.section');
+      section.classList.remove('active');
+      section.style.bottom = '-100px';
+      section.style.width = '45%';
+      section.style.opacity = '0';
+    }
+
+    document.addEventListener('click', function (e) {
+      const section = document.querySelector('.section');
+      const menu = document.getElementById('menu');
+      if (section.classList.contains('active') && !section.contains(e.target) && !menu.contains(e.target)) {
+        hideSection();
+      }
+    });
+
+    // Smooth scroll behavior
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>

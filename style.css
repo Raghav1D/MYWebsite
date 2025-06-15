@@ -84,7 +84,7 @@ body::-webkit-scrollbar-track {
     border-radius: 20px;
     opacity: 0;
     transition: all 0.3s ease;
-    animation: fadein 0.975s 0.9s forwards;
+    animation: animation1 0.975s 0.9s forwards;
 }
 
 .ul .logo {
@@ -93,7 +93,7 @@ body::-webkit-scrollbar-track {
     opacity: 0;
     transition: all 0.3s ease;
     position: relative;
-    animation: comein 1s 1.575s forwards ease;
+    animation: animation2 1s 1.575s forwards ease;
 }
 
 .ul .logo a {
@@ -246,7 +246,7 @@ li a:hover::after {
     opacity: 0;
     transition: all 0.3s ease;
     position: relative;
-    animation: comein 1s 1.575s forwards ease;
+    animation: animation2 1s 1.575s forwards ease;
 }
 
 .ul2 #logo2 a {
@@ -299,7 +299,7 @@ li a:hover::after {
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    width: 45%;
+    width: 90%;
     position: fixed;
     bottom: -100px;
     left: 50%;
@@ -309,7 +309,7 @@ li a:hover::after {
     height: 80px;
     border-radius: 20px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .section.active {
@@ -379,7 +379,7 @@ li a:hover::after {
     bottom: 0%;
     overflow: hidden;
     transition: all 0.3s ease;
-    animation: type2 4.5s 1.6s steps(20) forwards;
+    animation: animation3 4.5s 1.6s steps(20) forwards;
 }
 
 .box {
@@ -397,7 +397,7 @@ li a:hover::after {
     color: var(--c1);
     transition: all 0.3s ease;
     opacity: 0;
-    animation: fadein2 1.3s forwards;
+    animation: animation5 1.3s forwards;
 }
 
 #cont .text.first_text {
@@ -415,7 +415,7 @@ li a:hover::after {
     background-color: var(--bg1);
     border-left: 3px solid var(--bg2);
     transition: all 0.3s ease;
-    animation: animate 4.5s 1.5s steps(18) infinite;
+    animation: animation4 4.5s 1.5s steps(18) infinite;
 }
 
 .scroll {
@@ -429,7 +429,7 @@ li a:hover::after {
     font-size: 0.5rem;
     font-weight: 100;
     opacity: 0;
-    animation: scrolldown 1s 1.8s forwards;
+    animation: animation6 1s 1.8s forwards;
     transition: all 0.3s ease;  
     position: absolute;
     bottom: 0;
@@ -467,7 +467,7 @@ li a:hover::after {
     margin-left: auto;
     margin-right: auto;
     transition: all 0.3s ease;
-    animation: anima 1.5s forwards infinite;
+    animation: animation7 1.5s forwards infinite;
 }
 
 /* --- About Section (cont2) --- */
@@ -649,7 +649,7 @@ li a:hover::after {
     gap: 20px;
     padding-right: 20px;
     will-change: transform;
-    animation: scrolling 10s linear infinite;
+    animation: animation8 10s linear infinite;
 }
 
 .card {
@@ -768,7 +768,7 @@ li a:hover::after {
 }
 
 /* --- Keyframe Animations --- */
-@keyframes fadein {
+@keyframes animation1 {
     from {
         opacity: 0;
     }
@@ -778,7 +778,7 @@ li a:hover::after {
     }
 }
 
-@keyframes comein {
+@keyframes animation2{
     from {
         opacity: 0;
         transform: translateX(-1.563rem);
@@ -789,7 +789,7 @@ li a:hover::after {
     }
 }
 
-@keyframes type2 {
+@keyframes animation3 {
     40%,
     60% {
         left: 102%;
@@ -799,7 +799,7 @@ li a:hover::after {
     }
 }
 
-@keyframes animate {
+@keyframes animation4 {
     40%,
     60% {
         left: 100%;
@@ -809,7 +809,7 @@ li a:hover::after {
     }
 }
 
-@keyframes fadein2 {
+@keyframes animation5 {
     from {
         opacity: 0;
     }
@@ -818,7 +818,7 @@ li a:hover::after {
     }
 }
 
-@keyframes scrolldown {
+@keyframes animation6 {
     from {
         transform: translateY(-3.125rem);
         opacity: 0;
@@ -829,7 +829,7 @@ li a:hover::after {
     }
 }
 
-@keyframes anima {
+@keyframes animation7 {
     0% {
         opacity: 0;
         transform: translateY(-8px);
@@ -844,10 +844,11 @@ li a:hover::after {
     }
 }
 
-@keyframes scrolling {
+@keyframes animation8 {
     0% {
-        transform: translateX(0);
-    }
+         transform: translateX(0);
+        }
+        
     100% {
         transform: translateX(-100%);
     }
@@ -909,6 +910,17 @@ body.dark-mode li a::after {
     background-color: var(--bg1);
 }
 
+body.dark-mode #modeToggle {
+    background-color: #f7f9fccb;
+    backdrop-filter: blur(1px);
+    color: var(--c1);
+}
+
+body.dark-mode #modeToggle:hover {
+    background-color: #f7f9fc;
+    color: #000;
+}
+
 body.dark-mode .downbar {
     background-color: rgba(0, 0, 0, 0.05);
     box-shadow: 10px 8px 10px rgba(0, 0, 0, 0.1);
@@ -929,6 +941,17 @@ body.dark-mode .downbar .ul2 #menu:hover {
     color: #fff;
 }
 
+body.dark-mode #modeToggle2 {
+    background-color: #f7f9fccb;
+    backdrop-filter: blur(1px);
+    color: var(--c1);
+}
+
+body.dark-mode #modeToggle2:hover {
+    background-color: #f7f9fc;
+    color: #000;
+}
+
 body.dark-mode #cont {
     background-color: var(--bg2);
     color: var(--c2);
@@ -945,7 +968,7 @@ body.dark-mode .name h4::after {
     bottom: 0%;
     overflow: hidden;
     transition: all 0.3s ease;
-    animation: type2 4.5s 1.6s steps(20) forwards;
+    animation: animation3 4.5s 1.6s steps(20) forwards;
 }
 
 body.dark-mode #cont .first_text {
@@ -1053,28 +1076,6 @@ body.dark-mode #cont4 #blogsSectionHeading::before {
     background-color: var(--c2);
 }
 
-body.dark-mode #modeToggle {
-    background-color: #f7f9fccb;
-    backdrop-filter: blur(1px);
-    color: var(--c1);
-}
-
-body.dark-mode #modeToggle:hover {
-    background-color: #f7f9fc;
-    color: #000;
-}
-
-body.dark-mode #modeToggle2 {
-    background-color: #f7f9fccb;
-    backdrop-filter: blur(1px);
-    color: var(--c1);
-}
-
-body.dark-mode #modeToggle2:hover {
-    background-color: #f7f9fc;
-    color: #000;
-}
-
 body.dark-mode .footer {
     background-color: #000;
     color: #ddd;
@@ -1101,7 +1102,7 @@ body.dark-mode .footer {
         background-color: var(--bg1);
         border-left: 2px solid var(--bg2);
         transition: all 0.3s ease;
-        animation: animate 4s 1.4s paused steps(18) infinite;
+        animation: animation4 4s 1.4s paused steps(18) infinite;
     }
 
     #cont .sec_text {
@@ -1109,6 +1110,7 @@ body.dark-mode .footer {
     }
 }
 
+/* --- media queries2 --- */
 @media (max-width: 780px) {
     body {
         overflow: hidden;
@@ -1166,7 +1168,7 @@ body.dark-mode .footer {
         background-color: var(--bg1);
         border-left: 2px solid var(--bg2);
         transition: all 0.3s ease;
-        animation: animate 4s 1.4s paused steps(18) infinite;
+        animation: animation4 4s 1.4s paused steps(18) infinite;
     }
 
     .scroll {
@@ -1223,4 +1225,5 @@ body.dark-mode .footer {
         margin-bottom: auto;
         margin-top: 30px;
     }
+    
 }

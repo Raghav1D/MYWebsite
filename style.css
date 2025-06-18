@@ -87,20 +87,53 @@ body::-webkit-scrollbar-track {
     animation: animation1 0.975s 0.9s forwards;
 }
 
+#home{
+    transform: translateY(-20px);
+    opacity: 0;
+    animation: animation9 1.0s 1.2s cubic-bezier(.47,1.64,.41,.8) forwards;
+}
+#about{
+    transform: translateY(-25px);
+    opacity: 0;
+    animation: animation9 1.0s 1.4s cubic-bezier(.47,1.64,.41,.8) forwards;
+}
+#MYProjects{
+    transform: translateY(-30px);
+    opacity: 0;
+    animation: animation9 1.0s 1.6s cubic-bezier(.47,1.64,.41,.8) forwards;
+}
+#blog{
+    transform: translateY(-35px);
+    opacity: 0;
+    animation: animation9 1.0s 2.0s cubic-bezier(.47,1.64,.41,.8) forwards;
+}
+
+@keyframes animation9 {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 .ul .logo {
     margin-right: auto;
-    margin-left: 6px;
+    margin-left: 30px;
+    width: auto;
     opacity: 0;
     transition: all 0.3s ease;
     position: relative;
-    animation: animation2 1s 1.575s forwards ease;
+    animation: animation2 1s 1.575s cubic-bezier(.47,1.64,.41,.8) forwards;
 }
 
 .ul .logo a {
     text-decoration: none;
     font-size: 1.25rem;
-    padding: 0 1.875rem;
+    width: 1.375rem;
     font-weight: 500;
+    background-color: none;
     color: var(--c1);
     transition: all 0.3s ease;
 }
@@ -152,7 +185,7 @@ li a::after {
     opacity: 0.8;
     border-radius: 1000px;
     background-color: var(--bg2);
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(.47,1.64,.41,.8);
 }
 
 li a:hover::after {
@@ -198,7 +231,9 @@ li a:hover::after {
     margin-left: auto;
     font-size: x-large;
     overflow: hidden;
+    opacity: 0;
     transition: all 0.3s ease;
+    animation: animation1 0.975s 0.9s forwards;
 }
 
 #modeToggle2:hover {
@@ -242,17 +277,17 @@ li a:hover::after {
 
 .ul2 #logo2 {
     margin-right: auto;
-    margin-left: 6px;
+    margin-left: 25px;
     opacity: 0;
     transition: all 0.3s ease;
     position: relative;
-    animation: animation2 1s 1.575s forwards ease;
+    animation: animation2 1s 1.575s cubic-bezier(.47,1.64,.41,.8) forwards;
 }
 
 .ul2 #logo2 a {
     text-decoration: none;
     font-size: 1.15rem;
-    padding: 0 1.875rem;
+    width: 0 1.375rem;
     font-weight: 600;
     color: var(--c1);
     transition: all 0.3s ease;
@@ -268,9 +303,22 @@ li a:hover::after {
     color: var(--sc1);
     height: 50px;
     width: 60px;
+    transform: translateY(20px);
+    opacity: 0;
     overflow: hidden;
     margin-left: auto;
     transition: all 0.3s ease;
+    animation: animation10 1.0s 1.5s cubic-bezier(.47,1.64,.41,.8) forwards;
+}
+
+@keyframes animation10{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 .downbar .ul2 #menu:hover {
@@ -309,12 +357,11 @@ li a:hover::after {
     height: 80px;
     border-radius: 20px;
     overflow: hidden;
-    transition: all 0.5s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .section.active {
     bottom: 85px;
-    width: 90%;
     opacity: 1;
 }
 
@@ -345,8 +392,10 @@ li a:hover::after {
     min-height: 100vh;
     width: 100%;
     background: var(--bg1);
+    border-bottom: 1px solid #f0f0f0;
     padding-top: 20px;
     overflow: hidden;
+    position: relative;
     transition: all 0.3s ease;
 }
 
@@ -358,7 +407,7 @@ li a:hover::after {
     align-items: center;
     background-color: none;
     height: 100px;
-    width: 200px;
+    width: 500px;
     overflow: hidden;
     transform: translateY(120px);
 }
@@ -429,10 +478,11 @@ li a:hover::after {
     font-size: 0.5rem;
     font-weight: 100;
     opacity: 0;
-    animation: animation6 1s 1.8s forwards;
-    transition: all 0.3s ease;  
     position: absolute;
-    bottom: 0;
+    bottom: 2%;
+    left: 38%;
+    animation: animation6 1s 1.8s cubic-bezier(.47,1.64,.41,.8) forwards;
+    transition: all 0.3s ease; 
 }
 
 .scroll a {
@@ -479,7 +529,8 @@ li a:hover::after {
     padding: 50px 0;
     width: 100%;
     min-height: 120vh;
-    background-color: #f0f0f0;
+    background-color: var(--bg1);
+    border-bottom: 1px solid #f0f0f0;
     color: var(--bg2);
     transition: all 0.3s ease;
 }
@@ -538,7 +589,7 @@ li a:hover::after {
     align-items: center;
     background-color: none;
     margin-top: 20px;
-    border-radius: 20px;
+    border-radius: 1000px;
     border: 2px solid var(--bg2);
     height: 50px;
     width: auto;
@@ -546,6 +597,31 @@ li a:hover::after {
     transition: all 0.3s ease;
     margin-left: auto;
     margin-right: 50px;
+    position: relative;
+}
+
+#social_links::after{
+    position: absolute;
+    content: "Contact Me!";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: large;
+    z-index: 20;
+    background-color: var(--bg2);
+    color: var(--bg1);
+    width: 100%;
+    height: 100%;
+    border-radius: 1000px;
+    transition: all 0.3s ease;
+}
+
+#social_links:hover::after{
+    transform: translateY(-27px);
+    height: 40%;
+    width: 30%;
+    font-size: 8px;
 }
 
 #social_links a {
@@ -575,6 +651,7 @@ li a:hover::after {
     transform: rotate(25deg);
     border-radius: 1000px;
     opacity: 0;
+    z-index: 25;
     transition: all 0.2s ease;
 }
 
@@ -585,6 +662,7 @@ li a:hover::after {
     height: 8px;
     width: 8px;
     opacity: 0;
+    z-index: 25;
     transition: all 0.2s ease;
 }
 
@@ -607,6 +685,7 @@ li a:hover::after {
     justify-content: center;
     align-items: center;
     background-color: var(--bg1);
+    border-bottom: 1px solid #f0f0f0;
     color: var(--bg2);
     min-height: 120vh;
     width: 100%;
@@ -696,7 +775,7 @@ li a:hover::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: var(--bg1);
     color: var(--bg2);
     min-height: 100vh;
     width: 100%;
@@ -954,6 +1033,7 @@ body.dark-mode #modeToggle2:hover {
 
 body.dark-mode #cont {
     background-color: var(--bg2);
+    border-bottom: 1px solid #222;
     color: var(--c2);
 }
 
@@ -1014,7 +1094,8 @@ body.dark-mode #dot {
 }
 
 body.dark-mode #cont2 {
-    background-color: #11161d;
+    background-color: var(--bg2);
+    border-bottom: 1px solid #222;
     color: var(--c2);
 }
 
@@ -1040,6 +1121,7 @@ body.dark-mode #social_links a {
 
 body.dark-mode #cont3 {
     background-color: var(--bg2);
+    border-bottom: 1px solid #222;
     color: var(--c2);
 }
 
@@ -1061,7 +1143,7 @@ body.dark-mode #cont3 #check_link::before {
 }
 
 body.dark-mode #cont4 {
-    background-color: #11161d;
+    background-color: var(--bg2);
 }
 
 body.dark-mode #cont4 #blogsSectionHeading {

@@ -1,12 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>MYWebsite</title>
+  <meta name="description" content="MYWebsite, is just a simple website that showcases the projects related programming languages.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-</head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
 
 <body>
   
@@ -20,7 +21,7 @@
         <li><a href="#cont2" id="about" class="nav_link" aria-label="Go to About Section">About</a></li>
         <li><a href="#cont3" id="MYProjects" class="nav_link" aria-label="Go to Projects Section">Projects</a></li>
         <li><a href="#cont4" id="blog" class="nav_link" aria-label="Go to Blog Section">Blogs</a></li>
-      <button id="modeToggle" aria-label="Toggle dark mode"><i class="ri-moon-fill"></i></button>
+      <button id="modeToggle" aria-label="Toggle dark mode"><i class="ri-moon-clear-fill"></i></button>
     </div>
   </nav>
 
@@ -31,8 +32,8 @@
         <a href="#cont" aria-label="Go to homepage">MYWebsite</a>
       </div>
       <div class="rightbtm">
-        <button id="modeToggle2" aria-label="Toggle dark mode"><i class="ri-moon-fill"></i></button>
-        <li id="menu" onclick="showSection()" aria-label="Open side menu"><i class="ri-menu-5-line"></i></li>
+        <button id="modeToggle2" aria-label="Toggle dark mode"><i class="ri-moon-clear-fill"></i></button>
+        <li id="menu" onclick="showSection()" aria-label="Open side menu"><i class="ri-apps-2-line"></i></li>
       </div>
     </div>
   </div>
@@ -76,9 +77,10 @@
 
     <!-- Social Links -->
     <div id="social_links" role="region" aria-label="Social media links">
-      <link><a data-social="Whatsapp" style=" --colors: #25d365;" href="#"><i class="ri-whatsapp-line"></i></a></link>
-      <link><a data-social="Github" style=" --colors: #333333;" href="#"><i class="ri-github-line"></i></a></link>
-      <link><a data-social="Gmail" style=" --colors: #d44538;" href="#"><i class="ri-mail-line"></i></a></link>
+      <a data-social="Whatsapp" style=" --colors: #25d365;" href="https://wa.me/918427405882?text=Hello%20Raghav!%20I%20saw%20your%20MYWebsite." target="_blank"><i class="ri-whatsapp-line"></i></a>
+      <a data-social="Github" style=" --colors: #333333;" href="https://github.com/Raghav1D" target="_blank"><i class="ri-github-line"></i></a>
+      <a data-social="Instagram" style=" --colors: #fd1d1d;" href="#"><i class="ri-instagram-line"></i></a>
+      <a data-social="Email" style=" --colors: #666;" href="mailto:rajeevdhiman75b@gmail.com?subject=Inquiry%20from%20MYWebsite&body=Hello%20Raghav!%20I%20saw%20your%20MYWebsite."><i class="ri-at-line"></i></a>
     </div>
   </section>
 
@@ -118,12 +120,12 @@
   <nav class="section" role="navigation" aria-label="downbar navigation">
       <li>
         <a href="#cont" onclick="hideSection()" aria-label="Go to Home">
-          <i class="ri-home-fill" style="font-size: x-large;"></i><span> Home</span>
+          <i class="ri-tent-fill" style="font-size: x-large;"></i><span> Home</span>
         </a>
       </li>
       <li>
         <a href="#cont2" onclick="hideSection()" aria-label="Go to About">
-          <i class="ri-user-3-fill" style="font-size: x-large;"></i><span> About</span>
+          <i class="ri-user-5-fill" style="font-size: x-large;"></i><span> About</span>
         </a>
       </li>
       <li>
@@ -170,7 +172,7 @@
       document.body.classList.toggle('dark-mode');
       const isDark = document.body.classList.contains('dark-mode');
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      modeToggle.innerHTML = isDark ? `<i class="ri-sun-fill"></i>` : `<i class="ri-moon-fill"></i>`;
+      modeToggle.innerHTML = isDark ? `<i class="ri-sun-fill"></i>` : `<i class="ri-moon-clear-fill"></i>`;
     });
 
     if (modeToggle2) {
@@ -178,7 +180,7 @@
         document.body.classList.toggle('dark-mode');
         const isDark = document.body.classList.contains('dark-mode');
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        modeToggle2.innerHTML = isDark ? `<i class="ri-sun-fill"></i>` : `<i class="ri-moon-fill"></i>`;
+        modeToggle2.innerHTML = isDark ? `<i class="ri-sun-fill"></i>` : `<i class="ri-moon-clear-fill"></i>`;
       });
     }
 
@@ -193,7 +195,6 @@
       const section = document.querySelector('.section');
       const active = section.classList.toggle('active');
       section.style.bottom = active ? '85px' : '-100px';
-      section.style.width = active ? '90%' : '45%';
       section.style.opacity = active ? '1' : '0';
     }
 
@@ -201,7 +202,6 @@
       const section = document.querySelector('.section');
       section.classList.remove('active');
       section.style.bottom = '-100px';
-      section.style.width = '45%';
       section.style.opacity = '0';
     }
 
